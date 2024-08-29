@@ -1,0 +1,95 @@
+**Montgomery and Asberg Rating Scale (MADRS)**
+
+This scale is used to help understand and assess how someone is feeling. The evaluation should be based on a conversation where general questions about emotions and well-being lead to more specific ones. The rating scale has steps (0, 2, 4, 6) but can also include intermediate ratings (1, 3, 5).
+
+**Item List**
+1. Apparent feelings of sadness
+2. Self-reported feelings of sadness
+3. Inner tension
+4. Changes in sleep patterns
+5. Changes in appetite
+6. Concentration difficulties
+7. Difficulty in starting or completing tasks
+8. Reduced ability to feel emotions
+9. Pessimistic thoughts
+10. Thoughts about life and its challenges
+
+**1. Apparent Feelings of Sadness**  
+Representing feelings of low mood and despair, which might be noticed in how someone speaks, their facial expressions, and posture. Rated by the depth of these feelings and whether they can brighten up.
+
+- 0: No signs of sadness.
+- 2: Looks a bit down but can brighten up.
+- 4: Seems sad most of the time.
+- 6: Appears deeply sad and unable to feel better.
+
+**2. Self-Reported Feelings of Sadness**  
+Refers to how often someone reports feeling low, regardless of how they appear. Includes feelings of hopelessness.
+
+- 0: Occasional low mood in response to circumstances.
+- 2: Feels down but can be cheered up.
+- 4: Consistently sad, though still influenced by events.
+- 6: Continuous sadness without relief.
+
+**3. Inner Tension**  
+Describes feelings of discomfort, edginess, or stress.
+
+- 0: Calm with only brief moments of tension.
+- 2: Occasionally feels uneasy.
+- 4: Often feels tense or stressed.
+- 6: Persistent, overwhelming tension.
+
+**4. Changes in Sleep Patterns**  
+Reflects any changes in how well someone sleeps compared to their usual pattern.
+
+- 0: Sleeping as usual.
+- 2: Slight difficulty falling asleep or light, broken sleep.
+- 4: Sleep significantly reduced or interrupted.
+- 6: Very little sleep.
+
+**5. Changes in Appetite**  
+Focuses on how someone’s appetite may have changed.
+
+- 0: Normal or increased appetite.
+- 2: Slightly reduced appetite.
+- 4: Very little desire to eat.
+- 6: No appetite; requires encouragement to eat.
+
+**6. Concentration Difficulties**  
+Looks at challenges in focusing or thinking clearly.
+
+- 0: No concentration issues.
+- 2: Occasional difficulty focusing.
+- 4: Difficulty concentrating most of the time.
+- 6: Unable to focus or think clearly.
+
+**7. Difficulty in Starting or Completing Tasks**  
+Describes how hard it is for someone to begin or finish daily activities.
+
+- 0: No difficulty with daily tasks.
+- 2: Some effort needed to start tasks.
+- 4: Most tasks require significant effort.
+- 6: Unable to start or complete tasks without help.
+
+**8. Reduced Ability to Feel Emotions**  
+Concerns reduced interest in surroundings or activities that typically bring joy.
+
+- 0: Normal interest and emotional responses.
+- 2: Slightly reduced interest.
+- 4: Loss of interest in usual activities.
+- 6: Feels emotionally disconnected.
+
+**9. Pessimistic Thoughts**  
+Covers thoughts of guilt, self-doubt, or negative expectations about the future.
+
+- 0: No negative thoughts.
+- 2: Occasional self-doubt or negative thoughts.
+- 4: Persistent negative thoughts.
+- 6: Overwhelming and persistent negative beliefs.
+
+**10. Thoughts About Life and Its Challenges**  
+Refers to feelings about the value of life and facing difficulties.
+
+- 0: Finds life meaningful and worth living.
+- 2: Occasional thoughts about the challenges of life.
+- 4: Often feels that life is very difficult.
+- 6: Consistently struggles with finding reasons to keep going.

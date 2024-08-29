@@ -1,0 +1,1 @@
+export OUTLINES_CACHE_DIR="/mnt/beegfs/work/yilmaz/charite/.cache"
