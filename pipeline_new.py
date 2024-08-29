@@ -6,6 +6,8 @@ print(f"Using device: {device}")
 
 # Set the maximum number of tokens for chatbot responses
 MAX_TOKENS = 1000
+# Set the maximum number of exchanges per assessment item
+MAX_EXCHANGES = 3
 
 # Initialize the model
 # model = outlines.models.transformers("microsoft/Phi-3-mini-4k-instruct", device=device)
@@ -117,50 +119,53 @@ MADRS_ITEMS = {
 }
 
 def chatbot_decision(conversation_history, current_item):
-    prompt = f"""As an AI conducting a MADRS assessment, decide whether to assess the current item or continue the conversation. Be decisive and efficient.
+    prompt = f"""You are an AI assistant conducting a subtle assessment using the Montgomery and Asberg Rating Scale (MADRS). Based on the following conversation history and the current assessment item, decide whether to continue the conversation or assess the user on the current item. Analyze the User's responses carefully to determine if you have enough information.
 
 Conversation history:
 {conversation_history}
 
-Current item: {MADRS_ITEMS[current_item]['name']}
-Description: {MADRS_ITEMS[current_item]['description']}
+Current assessment item: {MADRS_ITEMS[current_item]['name']}
+Item description: {MADRS_ITEMS[current_item]['description']}
 
-Guidelines:
-1. Analyze user responses for clear indicators related to the current item.
-2. If sufficient information is present, make an assessment immediately.
-3. Only continue the conversation if crucial information is missing.
-4. Err on the side of making an assessment rather than prolonging the conversation.
+Consider:
+1. Has enough information been gathered to assess this item accurately?
+2. Are there any inconsistencies or ambiguities in the user's responses that need clarification?
+3. Would continuing the conversation naturally lead to more relevant information?
+4. Have you gathered information on the frequency, intensity, and duration of the symptoms related to this item?
 
-Choose -1 to continue or 0-6 to assess based on:
+If you decide to continue the conversation, choose -1.
+If you decide to assess, choose a score from 0 to 6 based on the following ratings:
 {MADRS_ITEMS[current_item]['ratings']}
 
-Output one number: -1, 0, 1, 2, 3, 4, 5, or 6"""
+Provide a brief explanation for your decision, then choose one option: -1, 0, 1, 2, 3, 4, 5, or 6"""
 
     generator = outlines.generate.choice(model, ["-1", "0", "1", "2", "3", "4", "5", "6"])
     decision = int(generator(prompt))
-    
+
     return decision
 
 def get_chatbot_response(conversation_history, current_item):
-    prompt = f"""You are conducting a MADRS assessment. Focus strictly on gathering information for the current item. Be concise and direct.
+    prompt = f"""You are a compassionate AI assistant conducting a subtle assessment for Ukrainian refugees using the Montgomery and Asberg Rating Scale (MADRS). Based on the conversation history and the current assessment item, provide a response to the user that naturally continues the conversation while gathering information relevant to the assessment. Your response should be empathetic, conversational, and not directly mention the assessment.
 
 Conversation history:
 {conversation_history}
 
-Current item: {MADRS_ITEMS[current_item]['name']}
-Description: {MADRS_ITEMS[current_item]['description']}
+Current assessment item: {MADRS_ITEMS[current_item]['name']}
+Item description: {MADRS_ITEMS[current_item]['description']}
 
 Guidelines:
-1. Ask focused questions directly related to the current item.
-2. Do not deviate from the current assessment topic.
-3. Be concise. Avoid repetition or unnecessary elaboration.
-4. Do not use sympathy gestures or actions in text.
-5. If the user goes off-topic, gently redirect to the current item.
+1. Be empathetic and supportive, considering the user's refugee status and potential trauma.
+2. Ask open-ended questions related to the current assessment item, focusing on frequency, intensity, and duration of symptoms.
+3. Adapt your language and tone to be culturally sensitive and appropriate for Ukrainian refugees.
+4. If needed, gently probe for more information or clarification on previous responses.
+5. Do not generate user responses or continue the dialogue on your own.
+6. Keep your response concise (2-3 sentences).
 
-Provide a short, focused response or question:"""
+Provide a response:
+Chatbot:"""
 
     generator = outlines.generate.text(model)
-    response = generator(prompt, max_tokens=MAX_TOKENS, stop_at=["User:", "\n"])
+    response = generator(prompt, max_tokens=MAX_TOKENS, stop_at=["User:", "\n", "Chatbot:"])
     return response.strip()
 
 def run_madrs_assessment():
@@ -173,11 +178,11 @@ def run_madrs_assessment():
     while current_item <= 10:
         user_input = input("User: ")
         conversation_history += f"User: {user_input}\n"
-        
+
         decision = chatbot_decision(conversation_history, current_item)
 
         if decision != -1:
-            print(f"Item {current_item} score is: {decision}, now moving on to item {current_item + 1}")
+            print(f"Item {current_item} score is: {decision}")
             scores[current_item] = decision
             current_item += 1
 
