@@ -30,8 +30,87 @@ MADRS_ITEMS = {
             4: "Pervasive feelings of sadness or gloominess. The mood is still influenced by external circumstances.",
             6: "Continuous or unvarying sadness, misery, or despondency."
         }
+    },
+    3: {
+        "name": "Inner Tension",
+        "description": "Representing feelings of ill-defined discomfort, edginess, inner turmoil, mental tension mounting to either panic, dread, or anguish. Rate according to intensity, frequency, duration, and the extent of reassurance called for.",
+        "ratings": {
+            0: "Placid. Only fleeting inner tension.",
+            2: "Occasional feelings of edginess and ill-defined discomfort.",
+            4: "Continuous feelings of inner tension or intermittent panic, which the patient can only master with some difficulty.",
+            6: "Unrelenting dread or anguish. Overwhelming panic."
+        }
+    },
+    4: {
+        "name": "Reduced Sleep",
+        "description": "Representing the experience of reduced duration or depth of sleep compared to the subject’s own normal pattern when well.",
+        "ratings": {
+            0: "Sleeps as usual.",
+            2: "Slight difficulty dropping off to sleep or slightly reduced, light, or fitful sleep.",
+            4: "Sleep reduced or broken by at least two hours.",
+            6: "Less than two or three hours of sleep."
+        }
+    },
+    5: {
+        "name": "Reduced Appetite",
+        "description": "Representing the feeling of a loss of appetite compared with when well. Rate by loss of desire for food or the need to force oneself to eat.",
+        "ratings": {
+            0: "Normal or increased appetite.",
+            2: "Slightly reduced appetite.",
+            4: "No appetite. Food is tasteless.",
+            6: "Needs persuasion to eat at all."
+        }
+    },
+    6: {
+        "name": "Concentration Difficulties",
+        "description": "Representing difficulties in collecting one’s thoughts, amounting to incapacitating lack of concentration. Rate according to intensity, frequency, and degree of incapacity produced.",
+        "ratings": {
+            0: "No difficulties in concentrating.",
+            2: "Occasional difficulties in collecting one’s thoughts.",
+            4: "Difficulties in concentrating and sustaining thought, which reduces ability to read or hold a conversation.",
+            6: "Unable to read or converse without great difficulty."
+        }
+    },
+    7: {
+        "name": "Lassitude",
+        "description": "Representing a difficulty in getting started or slowness in initiating and performing everyday activities.",
+        "ratings": {
+            0: "Hardly any difficulty in getting started. No sluggishness.",
+            2: "Difficulties in starting simple routine activities, which are carried out with effort.",
+            4: "Difficulties in starting simple routine activities which are carried out with effort.",
+            6: "Complete lassitude. Unable to do anything without help."
+        }
+    },
+    8: {
+        "name": "Inability to Feel",
+        "description": "Representing the subjective experience of reduced interest in the surroundings, or activities that normally give pleasure. The ability to react with adequate emotion to circumstances or people is reduced.",
+        "ratings": {
+            0: "Normal interest in the surroundings and in other people.",
+            2: "Reduced ability to enjoy usual interests.",
+            4: "Loss of interest in the surroundings. Loss of feelings for friends and acquaintances.",
+            6: "The experience of being emotionally paralyzed, inability to feel anger, grief, or pleasure, and a complete or even painful failure to feel for close relatives and friends."
+        }
+    },
+    9: {
+        "name": "Pessimistic Thoughts",
+        "description": "Representing thoughts of guilt, inferiority, self-reproach, sinfulness, remorse, and ruin.",
+        "ratings": {
+            0: "No pessimistic thoughts.",
+            2: "Fluctuating ideas of failure, self-reproach, or self-deprecation.",
+            4: "Persistent self-accusations, or definite but still rational ideas of guilt or sin. Increasingly pessimistic about the future.",
+            6: "Delusions of ruin, remorse, or unredeemable sin. Self-accusations which are absurd and unshakeable."
+        }
+    },
+    10: {
+        "name": "Suicidal Thoughts",
+        "description": "Representing the feeling that life is not worth living, that a natural death would be welcome, suicidal thoughts, and preparations for suicide. Suicidal attempts should not in themselves influence the rating.",
+        "ratings": {
+            0: "Enjoys life or takes it as it comes.",
+            2: "Weary of life. Only fleeting suicidal thoughts.",
+            4: "Probably better off dead. Suicidal thoughts are common, and suicide is considered a possible solution, but without specific plans or intention.",
+            6: "Explicit plans for suicide when there is an opportunity. Active preparations for suicide."
+        }
     }
-    # Add the remaining 8 items here
 }
 
 def chatbot_decision(conversation_history, current_item, exchange_count):
